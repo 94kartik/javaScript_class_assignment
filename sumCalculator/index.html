@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sum Calculator</title>
+</head>
+
+<body>
+    <div style='margin-left: 10%;'>
+        <h3>Add Two Numbers</h3>
+        <!--write your code here-->
+        <form >
+            <label for="num2">Number 1:</label><br>
+            <input type="number" id="num1" name="fname"><br>
+            <label for="num2">Number 2:</label><br>
+            <input type="number" id="num2" name="lname"><br>
+            <label for="result">sum:</label><br>
+            <input type="number" id="result" name="lname" disabled><br>
+            <button id="btn" onclick="add()">Submit</button>
+
+        </form>
+    </div>
+    <script>
+        function add() {
+
+
+            var x = parseInt(document.getElementById("num1").value);
+            var y = parseInt(document.getElementById("num2").value);
+
+
+            console.log(typeof x);
+            console.log(typeof y);
+            var result = x + y;
+
+
+            document.getElementById("result").value = result;
+            return false;
+        }
+    </script>
+</body>
+
+</html>

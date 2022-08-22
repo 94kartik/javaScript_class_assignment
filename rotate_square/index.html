@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rotate Square</title>
+    <style>
+        #box {
+            width: 100px;
+            height: 100px;
+            background: red;
+            transition: transform 2s;
+        }
+
+        .odd {
+            transform: rotate(180deg);
+        }
+
+        .even {
+            transform: rotate(0);
+        }
+    </style>
+</head>
+
+<body>
+    <div id="box" onmouseover="rotate()"></div>
+    <script>
+
+        const box = document.getElementById('box')
+        var isOdd = true;
+        function rotate() {
+            if (isOdd === true) {
+                box.className = "odd"
+
+            } else if (isOdd === false) {
+                box.className = "even"
+            }
+            isOdd = !isOdd;
+        }
+// this is how add to add two class in same element alternatively on mouse movement
+
+    </script>
+</body>
+
+</html>
